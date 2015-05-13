@@ -103,7 +103,7 @@ public class JSONEventLayoutV1 extends Layout {
          * Now we start injecting our own stuff.
          */
         logstashEvent.put("source_host", hostname);
-        logstashEvent.put("message", loggingEvent.getRenderedMessage());
+        logstashEvent.put("message", loggingEvent.getMessage());
 
         if (loggingEvent.getThrowableInformation() != null) {
             final ThrowableInformation throwableInformation = loggingEvent.getThrowableInformation();
